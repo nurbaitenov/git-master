@@ -124,3 +124,100 @@ terraform.tfstate may contain infrastructure details and sensitive information. 
 25. Typical Git workflow
 
 Create a branch, make changes, stage them with git add, commit with git commit, push the branch, update it with git fetch and git rebase if needed, open a Pull Request, and merge it into main after approval.
+
+
+
+
+# Linux Network
+
+1. Linux Networking
+
+Linux networking allows the operating system to communicate with other devices over a network. It uses network interfaces, IP addresses, routing, DNS, and protocols such as TCP and UDP to send and receive data.
+
+2. Network Interface (NI)
+
+A network interface is the connection between a Linux machine and a network. It can be physical (Ethernet/Wi-Fi) or virtual (Docker bridge), allowing the system to send and receive network traffic.
+
+3. Multiple Network Interfaces
+
+A Linux machine can have multiple network interfaces for different purposes. For example, eth0 (or ens3) connects to the network, lo is used for local communication, and Docker creates docker0 for container networking.
+
+4. Loopback Interface (lo)
+
+The loopback interface (lo) is used for communication between applications running on the same machine. Traffic sent to 127.0.0.1 or localhost never leaves the server.
+
+5. MAC Address
+
+A MAC address uniquely identifies a network interface on the local network (Layer 2). It is a hardware identifier assigned to the network interface.
+
+6. IP Address
+
+An IP address identifies a device on an IP network, allowing other devices to communicate with it. It can be assigned dynamically by DHCP or configured statically.
+
+7. Subnet Mask
+
+A subnet mask determines which part of an IP address represents the network and which part represents the host. It helps Linux decide whether traffic should stay on the local network or be sent to the gateway.
+
+8. Default Gateway
+
+The default gateway is the router Linux uses to send traffic to other networks, such as the Internet. If a destination is outside the local subnet, Linux forwards the packet to the gateway.
+
+9. DHCP
+
+DHCP (Dynamic Host Configuration Protocol) automatically assigns network settings such as the IP address, subnet mask, gateway, and DNS server. Linux then configures these settings on the network interface.
+
+10. DNS
+
+DNS (Domain Name System) translates human-readable domain names, such as google.com, into IP addresses. This allows computers to locate and communicate with remote servers.
+
+11. Routing Table
+
+The routing table tells Linux where to send outgoing network packets. If no specific route matches the destination, Linux uses the default route through the gateway.
+
+12. Port
+
+A port identifies a specific application or service running on a machine. While the IP address identifies the machine, the port directs traffic to the correct application, such as SSH or Nginx.
+
+13. TCP
+
+TCP (Transmission Control Protocol) provides reliable, ordered communication between applications. It guarantees packet delivery by acknowledging and retransmitting lost packets.
+
+14. UDP
+
+UDP (User Datagram Protocol) provides fast communication without guaranteeing delivery or packet order. It is commonly used for DNS, streaming, and online gaming.
+
+15. OSI Model
+
+The OSI (Open Systems Interconnection) model is a conceptual networking model with seven layers that explains how data travels between devices. It helps engineers understand and troubleshoot network communication.
+
+16. OSI Layers
+
+Application → Presentation → Session → Transport → Network → Data Link → Physical. Each layer has a specific responsibility, from application protocols to physical transmission.
+
+17. Application Layer
+
+Provides network services to applications using protocols such as HTTP, HTTPS, SSH, and DNS.
+
+18. Presentation Layer
+
+Formats, encrypts, and compresses data before transmission. HTTPS uses TLS encryption at this stage.
+
+19. Session Layer
+
+Establishes, maintains, and terminates communication sessions between applications.
+
+20. Transport Layer
+
+Provides end-to-end communication using TCP or UDP and delivers data between applications.
+
+21. Network Layer
+
+Routes packets between networks using IP addresses. Routers primarily operate at this layer.
+
+22. Data Link Layer
+
+Transfers frames within the local network using MAC addresses. Switches primarily operate at this layer.
+
+23. Physical Layer
+
+Transmits raw bits over physical media such as Ethernet cables, fiber optics, or Wi-Fi.
